@@ -32,7 +32,9 @@
 | 1 | 0 | output | no | Output Low (Sink) |
 | 1 | 1 | output | no | Output High (Source) 
 
-See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs folder of Digital-electronics-2 repository and find out which pins of ATmega328P can be used as input/output pins. To which pin is the LED L connected? Is it connected as active-low or active-high?
+" To which pin is the LED L connected? Is it connected as active-low or active-high?"
+
+ LED L is connected to pin 13 (PB5) and connected as active-high.
 
 | **Port** | **Pin** | **Input/output usage?** |
 | :-: | :-: | :-- |
@@ -49,15 +51,15 @@ See [schematic of Arduino Uno board](../../Docs/arduino_shield.pdf) in docs fold
 |   | 1 | Yes (pin A1) |
 |   | 2 | Yes (pin A2) |
 |   | 3 | Yes (pin A3) |
-|   | 4 | Yes (pin A4) |
-|   | 5 | Yes (pin A5) |
-|   | 6 |  |
-|   | 7 |  |
+|   | 4 | Yes (pin A4 / SDA) |
+|   | 5 | Yes (pin A5 / SCL) |
+|   | 6 | No |
+|   | 7 | Does not exist |
 | D | 0 | Yes (Arduino pin RX<-0) |
-|   | 1 |  |
-|   | 2 |  |
-|   | 3 |  |
-|   | 4 |  |
-|   | 5 |  |
-|   | 6 |  |
-|   | 7 |  |
+|   | 1 | Yes (Arduino pin TX -> 1) |
+|   | 2 | Yes (Arduino pin 2) |
+|   | 3 | Yes (Arduino pin 3) |
+|   | 4 | Yes (Arduino pin 4) |
+|   | 5 | Yes (Arduino pin 5) |
+|   | 6 | Yes (Arduino pin 6) |
+|   | 7 | Yes (Arduino pin 7) |
