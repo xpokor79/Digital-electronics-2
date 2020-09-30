@@ -28,7 +28,7 @@
 | **DDRB** | **PORTB** | **Direction** | **Internal pull-up resistor** | **Description** |
 | :-: | :-: | :-: | :-: | :-- |
 | 0 | 0 | input | no | Tri-state, high-impedance |
-| 0 | 1 | input | Yes / No | Pxn will source current if ext. pulled low. / Tri-state (Hi-Z) |
+| 0 | 1 | input | Yes | Pxn will source current if ext. pulled low |
 | 1 | 0 | output | no | Output Low (Sink) |
 | 1 | 1 | output | no | Output High (Source) 
 
