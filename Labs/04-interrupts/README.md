@@ -26,7 +26,7 @@ Push buttons connections: S1-A1 -> PC1[A1]; S2-A2 -> PC2[A2]; S3-A3 -> PC3[A3]
 | **Program address** | **Source** | **Vector name** | **Description** |
 | :-: | :-- | :-- | :-- |
 | 0x0000 | RESET | -- | Reset of the system |
-| 0x0001 | INT0  | `INT0_vect`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | External interrupt request number 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| 0x0001 | INT0  | `INT0_vect` | External interrupt request number 0 |
 | 0x002 | INT1 |  | External Interrupt Request 1 |
 | 0x003 | PCINT0 |  | Pin Change Interrupt Request 0 |
 | 0x004 | PCINT1 |  | Pin Change Interrupt Request 1 |
@@ -39,4 +39,14 @@ Push buttons connections: S1-A1 -> PC1[A1]; S2-A2 -> PC2[A2]; S3-A3 -> PC3[A3]
 | 0x014 | USART_RX |  | USART, Tx Complete |
 | 0x015 | ADC |  | ADC Conversion Complete |
 | 0x018 | TWI |  | 2-wire Serial Interface |
+
+
+| **Module** | **Description** | **MCU pin** | **Arduino pin** |
+| :-: | :-: | :-: | :-: |
+| Timer/Counter0 | OC0A | PD6 |  6 |
+|                | OC0B | PD5 |  5 |
+| Timer/Counter1 | OC1A | PB1 |  9 |
+|                | OC1B | PB2 | 10 |
+| Timer/Counter2 | OC2A | PB3 | 11 |
+|                | OC2B | PD3 |  3 |
 
