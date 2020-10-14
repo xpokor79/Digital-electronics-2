@@ -12,3 +12,41 @@
 LEDs connections : D1 -> PB5[13]; D2 -> PB4[12]; D3 -> PB3[~11]; D4 -> PB2[~10]
 
 Push buttons connections: S1-A1 -> PC1[A1]; S2-A2 -> PC2[A2]; S3-A3 -> PC3[A3]
+
+
+
+| **Module** | **Operation** | **I/O register(s)** | **Bit(s)** |
+| :-: | :-- | :-: | :-- |
+| Timer/Counter0 | Prescaler<br><br>8-bit data value<br>Overflow interrupt enable | TCCR0B<br><br>TCNT0<br>TIMSK0 |  CS02, CS01, CS00<br>(000: stopped, 001: 1, 010: 8, 011: 64, 100: 256, 101: 1024)<br>TCNT0[7:0]<br>TOIE0 (1: enable, 0: disable)|
+| Timer/Counter1 | Prescaler<br><br>16-bit data value<br>Overflow interrupt enable | TCCR1B<br><br>TCNT1H, TCNT1L<br>TIMSK1 | CS12, CS11, CS10<br>(000: stopped, 001: 1, 010: 8, 011: 64, 100: 256, 101: 1024)<br>TCNT1[15:0]<br>TOIE1 (1: enable, 0: disable) |
+| Timer/Counter2 | Prescaler<br><br>8-bit data value<br>Overflow interrupt enable | TCCR2B<br><br><br>TCNT2<br>TIMSK2 |  CS22, CS21, CS20<br>(000: stopped, 001: 1, 010: 8, 011: 32, 100: 64, 101: 128, 110: 256, 111: 1024)<br>TCNT2[7:0]<br>TOIE2 (1: enable, 0: disable) |
+
+
+
+| **Program address** | **Source** | **Vector name** | **Description** |
+| :-: | :-- | :-- | :-- |
+| 0x0000 | RESET | -- | Reset of the system |
+| 0x0001 | INT0  | `INT0_vect` | External interrupt request number 0 |
+| 0x002 | INT1 |  | External Interrupt Request 1 |
+| 0x003 | PCINT0 |  | Pin Change Interrupt Request 0 |
+| 0x004 | PCINT1 |  | Pin Change Interrupt Request 1 |
+| 0x005 | PCINT2 |  | Pin Change Interrupt Request 2 |
+| 0x006 | WDT |  | Watchdog Time-out Interrupt |
+| 0x009 | TIMER2_OVF |  | Timer/Counter2 Overflow |
+| 0x0018 | TIMER1_COMPB | `TIMER1_COMPB_vect` | Compare match between Timer/Counter1 value and channel B compare value |
+| 0x001A | TIMER1_OVF | `TIMER1_OVF_vect` | Overflow of Timer/Counter1 value |
+| 0x010 | TIMER0_OVF |  | Timer/Counter0 Overflow |
+| 0x014 | USART_RX |  | USART, Tx Complete |
+| 0x015 | ADC |  | ADC Conversion Complete |
+| 0x018 | TWI |  | 2-wire Serial Interface |
+
+
+| **Module** | **Description** | **MCU pin** | **Arduino pin** |
+| :-: | :-: | :-: | :-: |
+| Timer/Counter0 | OC0A | PD6 |  6 |
+|                | OC0B | PD5 |  5 |
+| Timer/Counter1 | OC1A | PB1 |  9 |
+|                | OC1B | PB2 | 10 |
+| Timer/Counter2 | OC2A | PB3 | 11 |
+|                | OC2B | PD3 |  3 |
+
