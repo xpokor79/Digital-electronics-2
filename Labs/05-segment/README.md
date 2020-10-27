@@ -20,7 +20,7 @@ Connection of seven-segment display: PB0[8] - data input | PD7[~7] - Clock | PD4
 
 Shift registry 74HC595 slouží k tomu, aby bylo možné ze sériové komunikace poslat paralelně všechny data o jednotlivých pinech naráz. (Aby se číslo zobrazilo naráz a ne postupně).
 
- ## Snake look-up table:**
+ ## Snake look-up table:
 
 | **Position** | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **DP** | **SEG** | **Position** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-:| :-: |
