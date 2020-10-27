@@ -9,8 +9,8 @@ uint8_t segment  = 0;
 
 /* Function definitions ----------------------------------------------*/
 /**
- * Main function where the program execution begins. Display decimal 
- * counter values on SSD (Seven-segment display) when 16-bit 
+ * Main function where the program execution begins. Display snake 
+ * on SSD (Seven-segment display) when 16-bit 
  * Timer/Counter1 overflows.
  */
 int main(void)
@@ -42,7 +42,7 @@ int main(void)
 
 /* Interrupt service routines ----------------------------------------*/
 /**
- * ISR starts when Timer/Counter1 overflows. Increment decimal counter
+ * ISR starts when Timer/Counter1 overflows. Increment segment (snake position)
  * value.
  */
 ISR(TIMER1_OVF_vect)
