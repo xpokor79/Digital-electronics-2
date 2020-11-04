@@ -23,7 +23,7 @@ ASCII table is a look-up table where each symbol has its own value (number).
    | `lcd_init` | `LCD_DISP_OFF`<br>`LCD_DISP_ON`<br>`LCD_DISP_ON_CURSOR`<br>`LCD_DISP_ON_CURSOR_BLINK` | Display off<br>display on, cursor off;<br>display on, cursor on;<brdisplay on, cursor on flashing | `lcd_init(LCD_DISP_OFF);`<br>&nbsp;<br>&nbsp;<br>&nbsp; |
    | `lcd_clrscr` | `void` | Clear display and set cursor to home position. | `lcd_clrscr();` |
    | `lcd_gotoxy` | uint8_t x,uint8_t y| Set cursor to specified position. | `lcd_gotoxy(0, 1);` |
-   | `lcd_putc` | char c | Display character at current cursor position. | lcd_putc( "A") |
-   | `lcd_puts` | | | |
-   | `lcd_command` | | | |
-   | `lcd_data` | | | |
+   | `lcd_putc` | char c | Display character at current cursor position. | `lcd_putc('A')` |
+   | `lcd_puts` | string s | Display string without auto linefeed. | `lcd_puts("Ahoj")` |
+   | `lcd_command` | cmd	instruction to send to LCD controller | Send LCD controller instruction command. | `lcd_puts(cmd)` |
+   | `lcd_data` | data	byte to send to LCD controller | Send data byte to LCD controller. Similar to lcd_putc(), but without interpreting LF | `lcd_puts(data)` |
